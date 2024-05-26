@@ -1,2 +1,10 @@
-GET http://localhost:5001/api/producto HTTP/1.1
+GET https://reqres.in/api/users HTTP/1.1
 Accept: application/json
+
+GET https://reqres.in/api/users/1 HTTP/1.1
+Accept: application/json
+
+POST https://reqres.in/api/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+

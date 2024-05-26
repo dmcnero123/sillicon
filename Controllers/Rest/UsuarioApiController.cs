@@ -11,10 +11,10 @@ namespace sillicon.Controllers.Rest
 {
     [ApiController]
     [Route("api/Usuario")]
-    public class ProductoApiController : ControllerBase
+    public class UsuarioApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        public ProductoApiController(ApplicationDbContext context)
+        public UsuarioApiController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -24,10 +24,10 @@ namespace sillicon.Controllers.Rest
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<List<Cuenta>>> List()
         {
-            var productos = await _context.DataCuenta.ToListAsync();
-             if(productos == null)
+            var cuentas = await _context.DataCuenta.ToListAsync();
+             if(cuentas == null)
                 return NotFound();
-            return Ok(productos);
+            return Ok(cuentas);
         }
 
     }
